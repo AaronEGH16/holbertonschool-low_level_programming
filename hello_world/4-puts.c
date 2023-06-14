@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	char text2[53];
-	char text1[3];
-	text1 = '"';
-	text2 = "Programming is like building a multilingual puzzle";
+	char text1[] = '"';
+	char text2[] = "Programming is like building a multilingual puzzle";
+
 	puts(text1);
 	puts(text2);
+
 	return (0);
 }
