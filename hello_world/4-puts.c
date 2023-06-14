@@ -8,6 +8,8 @@
 
 int main(void)
 {
-	puts('"'"Programming is like building a multilingual puzzle");
+	char text[51];
+	text = '"'"Programming is like building a multilingual puzzle";
+	puts(text);
 	return (0);
 }
