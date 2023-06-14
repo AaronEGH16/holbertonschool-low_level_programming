@@ -9,7 +9,7 @@
 int main(void)
 {
 	char text[51];
-	text = '"'"Programming is like building a multilingual puzzle";
-	puts(text);
+	text = "Programming is like building a multilingual puzzle";
+	puts('"',text);
 	return (0);
 }
