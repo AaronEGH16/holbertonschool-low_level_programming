@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE | mv *.o *.s
+gcc -S $CFILE #| mv *.o *.s
