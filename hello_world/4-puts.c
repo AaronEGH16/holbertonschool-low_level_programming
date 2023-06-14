@@ -8,11 +8,9 @@
 
 int main(void)
 {
-	char text1[] = '"';
-	char text2[] = "Programming is like building a multilingual puzzle";
+	char text[] = "Programming is like building a multilingual puzzle";
 
-	puts(text1);
-	puts(text2);
+	puts(text);
 
 	return (0);
 }
