@@ -5,7 +5,7 @@
 
 /* betty style doc for function main goes there */
 /**
- * main - select a random number and says if the last number is 0, less than 6 and not 0, and is greater than 5
+ * main - select a random number and says if the last number is =0, <6, >5
  *
  * Return: always return 0
  */
@@ -18,6 +18,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
 	int lastN = n % 10;
+
 	printf("Last digit of %d is %d ", n, lastN);
 	if (lastN == 6)
 		puts("is 6");
