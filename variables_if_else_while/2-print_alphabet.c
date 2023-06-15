@@ -15,6 +15,6 @@ int main(void)
 	{
 		putchar(ol);
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
