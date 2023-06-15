@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	char ol = a;
-	char dl = z;
+	char ol = 'a';
+	char dl = 'z';
 	for(ol; ol < dl; ol++)
 	{
 		putchar(ol);
