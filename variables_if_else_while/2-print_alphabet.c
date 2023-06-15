@@ -10,7 +10,8 @@ int main(void)
 {
 	char ol;
 	char dl = 'z';
-	for(ol = 'a'; ol < dl; ol++)
+
+	for(ol = 'a'; ol <= dl; ol++)
 	{
 		putchar(ol);
 	}
