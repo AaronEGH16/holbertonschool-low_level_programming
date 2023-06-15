@@ -31,6 +31,6 @@ int main(void)
 	{
 		printf(" and not 0");
 	}
-
+	printf("\n");
 	return (0);
 }
