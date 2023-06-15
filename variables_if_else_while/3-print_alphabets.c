@@ -9,6 +9,7 @@
 int main(void)
 {
 	char ol, dl, OL, DL;
+
 	dl = 'z';
 	DL = 'Z';
 
