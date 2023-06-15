@@ -31,6 +31,6 @@ int main(void)
 	{
 		puts(" and not 0");
 	}
-	puts("\n");
+
 	return (0);
 }
