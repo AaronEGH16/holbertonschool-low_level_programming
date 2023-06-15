@@ -17,6 +17,6 @@ int main(void)
 		putchar(ol);
 	for (OL = 'A'; OL <= DL; OL++)
 		putchar(OL);
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
