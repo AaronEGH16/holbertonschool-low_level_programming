@@ -12,11 +12,15 @@ int main(void)
 
 	for (num1 = 0; num1 < 9; num1++)
 	{
-		putchar(48 + num1);
-		num2 = num1;
+		num2 = num1 + 1;
 		for (; num2 <= 9; num2++)
 		{
+			putchar(48 + num1);
 			putchar(48 + num2);
+			if (num1 == 8 && num2 == 9)
+			{
+				continue;
+			}
 			putchar(',');
 			putchar(' ');
 		}
