@@ -3,7 +3,7 @@
 /**
  * _islower - says if c is lower or not
  *
- * int C: char to check
+ * @c: char to check
  *
  * Return: returns != 0 if is lower and == 0 if is´n lower
  */
