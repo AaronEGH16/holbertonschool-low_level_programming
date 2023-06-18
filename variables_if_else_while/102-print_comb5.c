@@ -14,10 +14,10 @@ int main(void)
 	{
 		for (num2 = 0; num2 <= 9; num2++)
 		{
+			num4 = num2 + 1;
+
 			for (num3 = 0; num3 <= 9; num3++)
 			{
-				num4 = num2 + 1;
-
 				for (; num4 <= 9; num4++)
 				{
 					putchar(48 + num1);
