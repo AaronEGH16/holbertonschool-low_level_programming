@@ -1,2 +1,2 @@
 int _putchar(char);
-int putc (void);
+int main (void);
