@@ -10,7 +10,7 @@ int main(void)
 {
 	int num1, num2, num3, num4;
 
-	/*num4 = 1;*/
+	num4 = 1;
 
 	for (num1 = 0; num1 <= 9; num1++)
 	{
@@ -18,7 +18,7 @@ int main(void)
 		{
 			for (num3 = 0; num3 <= 9; num3++)
 			{
-				for (num4 = 0; num4 <= 9; num4++)
+				for (; num4 <= 9; num4++)
 				{
 					putchar(48 + num1);
 					putchar(48 + num2);
@@ -32,6 +32,7 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
+				num4 = 0;
 			}
 		}
 	}
