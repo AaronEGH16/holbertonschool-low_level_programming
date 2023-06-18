@@ -1,2 +1,2 @@
 int _putchar(char);
-int *test (void);
+int putc (void);
