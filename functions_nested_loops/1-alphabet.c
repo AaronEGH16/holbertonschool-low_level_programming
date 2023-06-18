@@ -8,7 +8,7 @@ void print_alphabet(void)
 {
 	char Origin = 'a';
 
-	for (; Origen <= 'z'; Origin++)
+	for (; Origin <= 'z'; Origin++)
 	{
 		_putchar(Origin);
 	}
