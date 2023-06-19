@@ -6,4 +6,5 @@ NAME := ${NAME}
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(SRC) $(OBJ) -o $(NAME)
+	$(CC)    -c -o $(OBJ) $(SRC)
+	$(CC) $(OBJ) -o $(NAME)
