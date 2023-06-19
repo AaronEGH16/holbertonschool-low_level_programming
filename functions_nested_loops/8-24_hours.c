@@ -15,10 +15,12 @@ void jack_bauer(void)
 		{
 			HR1 = hr / 10;
 			HR2 = hr % 10;
+			MN1 = mn / 10;
+			MN2 = mn % 10;
 			_putchar(HR1);
 			_putchar(HR2);
-			_putchar(mn / 10);
-			_putchar(mn % 10);
+			_putchar(MN1);
+			_putchar(MN2);
 			_putchar('\n');
 		}
 	}
