@@ -1,0 +1,4 @@
+all: school
+
+school:
+	$(CC) $(SRC) -o school
