@@ -12,7 +12,10 @@ void times_table(void)
 	{
 		for (y = 0; y < 10; y++)
 		{
-			if (((y * x) / 10) == 0)
+			if (y == 0)
+			{
+			}
+			else if (((y * x) / 10) == 0)
 			{
 				_putchar(' ');
 			}
