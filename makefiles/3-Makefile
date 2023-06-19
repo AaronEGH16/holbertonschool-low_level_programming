@@ -11,10 +11,9 @@ clean:
 	$(RM) *~ *.swp $(NAME)
 
 oclean:
-	$(RM) *.o
+	$(RM) $(OBJ)
 
 fclean:
-	$(RM) *~ *.swp *.o $(NAME)
+	$(RM) *~ *.swp $(OBJ) $(NAME)
 
-re: $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+re: all
