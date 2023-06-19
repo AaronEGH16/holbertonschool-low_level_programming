@@ -7,6 +7,7 @@
 void jack_bauer(void)
 {
 	int hr, mn;
+	char HR1, HR2, MN1, MN2;
 
 	for (hr = 0; hr <= 23; hr++)
 	{
