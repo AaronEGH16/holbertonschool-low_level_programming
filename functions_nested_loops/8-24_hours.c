@@ -12,10 +12,11 @@ void jack_bauer(void)
 	{
 		for (mn = 0; mn <= 59; mn++)
 		{
-			_putchar(hr / 10);
+			_putchar("%d", hr / 10);
 			_putchar(hr % 10);
 			_putchar(mn / 10);
 			_putchar(mn % 10);
+			_putchar('\n');
 		}
 	}
 }
