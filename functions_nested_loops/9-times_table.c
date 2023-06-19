@@ -12,7 +12,14 @@ void times_table(void)
 	{
 		for (y = 0; y < 10; y++)
 		{
-			_putchar('0' + ((y * x) / 10));
+			if (((y * x) / 10) == 0)
+			{
+				_putchar(' ');
+			}
+			else
+			{
+				_putchar('0' + ((y * x) / 10));
+			}
 			_putchar('0' + ((y * x) % 10));
 			if (y == 9)
 			{
