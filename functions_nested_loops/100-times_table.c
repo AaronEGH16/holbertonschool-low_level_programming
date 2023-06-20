@@ -16,25 +16,26 @@ void print_times_table(int n)
 		{
 			for (y = 0; y <= n; y++)
 			{
-				if (((y * x) / 100) == 0)
+				if (y != 0)
 				{
-					_putchar(' ');
-				}
-				else if (((y * x) / 100) != 0)
-				{
-					_putchar('0' + (((y * x) / 100)));
-				}
-
-				if (((y * x) / 10) == 0)
-				{
-					_putchar(' ');
-				}
-				else if (((y * x) / 10) != 0)
-				{
-					_putchar('0' + (((y * x) % 100) / 10));
+					if (((y * x) / 100) == 0)
+					{
+						_putchar(' ');
+					}
+					else if (((y * x) / 100) != 0)
+					{
+						_putchar('0' + (((y * x) / 100)));
+					}
+					if (((y * x) / 10) == 0)
+					{
+						_putchar(' ');
+					}
+					else if (((y * x) / 10) != 0)
+					{
+						_putchar('0' + (((y * x) % 100) / 10));
+					}
 				}
 				_putchar('0' + ((y * x) % 10));
-
 				if (y == n)
 				{
 					continue;
