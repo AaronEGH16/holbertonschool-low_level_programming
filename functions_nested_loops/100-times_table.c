@@ -22,7 +22,7 @@ void print_times_table(int n)
 				}
 				else if (((y * x) / 10) != 0)
 				{
-					_putchar('0' + ((y * x) / 10));
+					_putchar('0' + (((y * x) % 100) / 10));
 				}
 				_putchar('0' + ((y * x) % 10));
 				if (y == n)
