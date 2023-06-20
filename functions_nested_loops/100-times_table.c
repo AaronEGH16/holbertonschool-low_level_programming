@@ -1,0 +1,35 @@
+#include "./main.h"
+
+/**
+ * print_times_table - print multiplication table of n
+ *
+ * @n: value of the multiplication table
+ */
+
+void print_times_table(int n);
+{
+	int x, y;
+
+	for (x = 0; x < 10; x++)
+	{
+		for (y = 0; y < n; y++)
+		{
+			if (((y * x) / 10) == 0)
+			{
+				_putchar(' ');
+			}
+			else if (((y * x) / 10) != 0)
+			{
+				_putchar('0' + ((y * x) / 10));
+			}
+			_putchar('0' + ((y * x) % 10));
+			if (y == 9)
+			{
+				continue;
+			}
+			_putchar(',');
+			_putchar(' ');
+		}
+		_putchar('\n');
+	}
+}
