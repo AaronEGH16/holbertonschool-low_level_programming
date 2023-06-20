@@ -22,6 +22,7 @@ void print_diagonal(int n)
 			}
 			_putchar('\\');
 			y++;
+		}
 	}
 	_putchar('\n');
 }
