@@ -1,8 +1,35 @@
 #include "./main.h"
 
 /**
- * print_times_table - print multiplication table of n
  * aux - aux function
+ *
+ * @y: value to multiply
+ * @x: value to multiply
+ */
+
+void aux(int y, int x)
+{
+	if (((y * x) / 100) == 0)
+	{
+		_putchar(' ');
+	}
+	else if (((y * x) / 100) != 0)
+	{
+		_putchar('0' + (((y * x) / 100)));
+	}
+
+	if (((y * x) / 10) == 0)
+	{
+		_putchar(' ');
+	}
+	else if (((y * x) / 10) != 0)
+	{
+		_putchar('0' + (((y * x) % 100) / 10));
+	}
+}
+
+/**
+ * print_times_table - print multiplication table of n
  *
  * @n: value of the multiplication table
  */
@@ -17,7 +44,10 @@ void print_times_table(int n)
 		{
 			for (y = 0; y <= n; y++)
 			{
-				aux(y);
+				if (y != 0)
+				{
+					aux(y, x);
+				}
 				_putchar('0' + ((y * x) % 10));
 				if (y == n)
 				{
@@ -32,29 +62,5 @@ void print_times_table(int n)
 	else
 	{
 		_putchar('\n');
-	}
-}
-
-void aux(int y)
-{
-	if (y != 0)
-	{
-		if (((y * x) / 100) == 0)
-		{
-			_putchar(' ');
-		}
-		else if (((y * x) / 100) != 0)
-		{
-			_putchar('0' + (((y * x) / 100)));
-		}
-
-		if (((y * x) / 10) == 0)
-		{
-			_putchar(' ');
-		}
-		else if (((y * x) / 10) != 0)
-		{
-			_putchar('0' + (((y * x) % 100) / 10));
-		}
 	}
 }
