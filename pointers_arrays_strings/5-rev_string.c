@@ -12,7 +12,7 @@ int lenght_aux(char *s)
 
 	while (s[leng] != '\0')
 	{
-		len++;
+		leng++;
 	}
 	return (leng);
 }
