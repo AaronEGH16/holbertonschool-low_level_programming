@@ -10,14 +10,13 @@ void rev_string(char *s)
 {
 	int count1 = 0;
 	int count2 = 0;
-	char z;
 
 	while (s[count1] != '\0')
 	{
 		count1++;
 	}
 
-	z[count1];
+	char z[count1];
 
 	while (count1 > 0)
 	{
@@ -26,4 +25,6 @@ void rev_string(char *s)
 		count2++;
 
 	}
+
+	s = z;
 }
