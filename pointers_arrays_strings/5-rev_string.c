@@ -1,4 +1,21 @@
 #include "./main.h"
+/**
+ * lenght_aux - get a string lenght
+ *
+ * @s: string
+ * Return: string lenght
+ */
+
+int lenght_aux(char *s)
+{
+	int leng = 0;
+
+	while (s[leng] != '\0')
+	{
+		len++;
+	}
+	return (leng);
+}
 
 /**
  * rev_string - revert the text in string
@@ -8,27 +25,15 @@
 
 void rev_string(char *s)
 {
-	int count1 = 0;
-	int count2 = 0;
-	int count3 = 0;
-	char z[] = "";
+	int i = 0;
+	int j = (lenght_aux(s) - 1);
+	char z;
 
-	while (s[count1] != '\0')
+	while (i < j)
 	{
-		count1++;
-	}
-
-	while (count1 > 0)
-	{
-		count1--;
-		z[count2] = s[count1];
-		count2++;
-
-	}
-
-	while (count3 < count2)
-	{
-		s[count3] = z[count3];
-		count3++;
+		z = s[i];
+		s[i] = s[j];
+		s[j] = z;
+		i++, j--;
 	}
 }
