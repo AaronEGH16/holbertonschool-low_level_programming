@@ -12,7 +12,6 @@ int _atoi(char *s)
 {
 	int c = 0;
 	int num = 1;
-	int a = 1;
 
 	while (s[c] != '\0')
 	{
