@@ -22,16 +22,24 @@ int _atoi(char *s)
 		}
 		if (s[c] >= '0' && s[c] <= '9')
 		{
-			num = num + (s[c] - '0');
+			if (a < 0)
+			{
+				num = num - (s[c] - 48);
+			}
+			else
+			{
+				num = num + (s[c] - '0');
+			}
+
 			if (s[c + 1] >= '0' && s[c + 1] <= 57)
 			{
 				num = num * 10;
 			}
-		}
-		if (((s[c] >= '0' && s[c] <= '9') && (s[c + 1] < '0' || s[c + 1] > '9'))
-				|| s[c + 1] == '\0')
-		{
-			return (num * a);
+
+			if ((s[c + 1] < '0' || s[c + 1] > '9') || s[c + 1] == '\0')
+			{
+				return (num);
+			}
 		}
 		c++;
 	}
