@@ -31,9 +31,9 @@ int _atoi(char *s)
 		if (((s[c] >= '0' && s[c] <= '9') && (s[c + 1] < '0' || s[c + 1] > '9'))
 				|| s[c + 1] == '\0')
 		{
-			return (num * a);
+			return (num);
 		}
 		c++;
 	}
-	return (num * a);
+	return (0);
 }
