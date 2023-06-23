@@ -11,13 +11,14 @@
 int _atoi(char *s)
 {
 	int c = 0;
-	int num = 1;
+	int num = 0;
+	int a = 1;
 
 	while (s[c] != '\0')
 	{
 		if (s[c] == '-')
 		{
-			num = num * -1;
+			a = a * -1;
 		}
 		if (s[c] >= '0' && s[c] <= '9')
 		{
@@ -30,7 +31,7 @@ int _atoi(char *s)
 		if (((s[c] >= '0' && s[c] <= '9') && (s[c + 1] < '0' || s[c + 1] > '9'))
 				|| s[c + 1] == '\0')
 		{
-			return (num - 1);
+			return (num * a);
 		}
 		c++;
 	}
