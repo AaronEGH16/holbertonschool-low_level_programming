@@ -4,7 +4,9 @@
  * _strcpy - copy the string content to dest
  *
  * @dest: destiny of the copy
- * @str: string to copy
+ * @src: string to copy
+ *
+ * Return: returns a copy of src
  */
 
 char *_strcpy(char *dest, char *src)
@@ -17,4 +19,5 @@ char *_strcpy(char *dest, char *src)
 		count++;
 	}
 	dest[count] = '\0';
+	return (*dest);
 }
