@@ -9,15 +9,16 @@
 
 void reverse_array(int *a, int n)
 {
-	int count, storage;
+	int count, storage, lenght;
 
 	count = 0;
+	lenght = n - 1;
 
-	while (count < n)
+	while (count < lenght)
 	{
 		storage = a[count];
-		a[count] = a[n];
-		a[n] = storage;
+		a[count] = a[lenght];
+		a[lenght] = storage;
 		count++, n--;
 	}
 }
