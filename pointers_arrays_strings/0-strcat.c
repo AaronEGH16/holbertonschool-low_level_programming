@@ -12,6 +12,7 @@
 char *_strcat(char *dest, char *src)
 {
 	int long1, long2, count1, count2, long1_2;
+	char *new;
 
 	long1 = 0;
 	long2 = 0;
@@ -29,8 +30,6 @@ char *_strcat(char *dest, char *src)
 
 	long1_2 = long1 + long2;
 
-	char new[];
-
 	while (count1 < long1)
 	{
 		new[count1] = dest[count1];
@@ -43,5 +42,5 @@ char *_strcat(char *dest, char *src)
 		count2++;
 	}
 	new[count1] = '\0';
-	return (*new);
+	return (new);
 }
