@@ -10,7 +10,7 @@
  * Return: returns a copy of src but only n chars
  */
 
-char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n)
 {
 	int count = 0;
 
