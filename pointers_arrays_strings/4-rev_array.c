@@ -19,6 +19,6 @@ void reverse_array(int *a, int n)
 		storage = a[count];
 		a[count] = a[lenght];
 		a[lenght] = storage;
-		count++, n--;
+		count++, lenght--;
 	}
 }
