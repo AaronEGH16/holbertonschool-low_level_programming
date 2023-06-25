@@ -19,6 +19,6 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[count] = src[count];
 		count++;
 	}
-
+	dest[count] = '\n';
 	return (dest);
 }
