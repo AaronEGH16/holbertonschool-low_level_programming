@@ -12,7 +12,6 @@
 char *_strcat(char *dest, char *src)
 {
 	int long1, long2, count1, count2, long1_2;
-	char *new;
 
 	long1 = 0;
 	long2 = 0;
@@ -29,6 +28,8 @@ char *_strcat(char *dest, char *src)
 	}
 
 	long1_2 = long1 + long2;
+
+	char new[long1_2];
 
 	while (count1 < long1)
 	{
