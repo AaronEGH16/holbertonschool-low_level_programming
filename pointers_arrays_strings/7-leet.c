@@ -12,8 +12,8 @@ char *leet(char *str)
 {
 	int count1 = 0;
 	int count2;
-	char let[5] = {'a', 'e', 'o', 't', 'l'}
-	char num[5] = {'4', '3', '0', '7', '1'}
+	char let[5] = {'a', 'e', 'o', 't', 'l'};
+	char num[5] = {'4', '3', '0', '7', '1'};
 
 	while (str[count1] != '\0')
 	{
