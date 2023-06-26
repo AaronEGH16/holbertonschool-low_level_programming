@@ -1,12 +1,12 @@
 #include "./main.h"
 
 /**
- * _strspn -
+ * _strspn - return the number of first coincidences with accept in s
  *
- * @s:
- * @accept:
+ * @s: string to find
+ * @accept: letters to search
  *
- * Return:
+ * Return: the number of coincideces
  */
 
 unsigned int _strspn(char *s, char *accept)
@@ -24,7 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 				total++;
 				break;
 			}
-			else
+			else if (accept[count2 + 1] == '\0')
 			{
 				return (total);
 			}
