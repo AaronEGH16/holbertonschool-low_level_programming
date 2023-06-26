@@ -1,7 +1,12 @@
 #include "./main.h"
 
 /**
+ * _strstr - find the str2 text in str1
  *
+ * @haystack: string 1
+ * @needle: string 2
+ *
+ * Return: return the address of the firs letter of the coincidence
  */
 
 char *_strstr(char *haystack, char *needle)
@@ -29,4 +34,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		count++;
 	}
+	return (store);
 }
