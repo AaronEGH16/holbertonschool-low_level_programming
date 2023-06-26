@@ -15,6 +15,10 @@ char *_strstr(char *haystack, char *needle)
 	int count2;
 	char *store = '\0';
 
+	if (needle[0] == '\0')
+	{
+		return (&haystack[0]);
+	}
 	while (haystack[count] != '\0')
 	{
 		for (count2 = 0; needle[count2] != '\0'; count2++)
