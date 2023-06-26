@@ -15,12 +15,12 @@ void print_diagsums(int *a, int size)
 
 	for (c = 0; c < size; c++)
 	{
-		result1 += a[c][c];
+		result1 += *a[c][c];
 	}
 	c = size - 1;
 	for (; c >= 0; c--)
 	{
-		result2 += a[c][c];
+		result2 += *a[c][c];
 	}
 	printf("%d, %d", result1, result2);
 }
