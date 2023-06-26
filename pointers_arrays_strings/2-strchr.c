@@ -1,7 +1,12 @@
 #include "./main.h"
 
 /**
- * _strchr -
+ * _strchr - find the address of the firs ocurrence and return it
+ *
+ * @s: string where the programs look
+ * @c: character to find
+ *
+ * Return: return address to the firs ocurrence of c
  */
 
 char *_strchr(char *s, char c)
