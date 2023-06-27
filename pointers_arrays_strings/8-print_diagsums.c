@@ -9,18 +9,20 @@
 
 void print_diagsums(int *a, int size)
 {
-	int c;
+	int c, i;
 	int result1 = 0;
 	int result2 = 0;
 
 	for (c = 0; c < size; c++)
 	{
-		result1 += *a[c * c];
+		i = (c * size) + c;
+		result1 += a[i];
 	}
-	c = size - 1;
-	for (; c >= 0; c--)
+
+	for (c = 1; c <= size; c++)
 	{
-		result2 += *a[c * c];
+		i = (c * size) - c;
+		result2 += a[i];
 	}
 	printf("%d, %d", result1, result2);
 }
