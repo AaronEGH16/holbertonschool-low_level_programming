@@ -1,7 +1,7 @@
 #include "./main.h"
 
 /**
- * factorial - factorize the number N
+ * factorial - factorize the number n
  *
  * @n: int to factorize
  *
