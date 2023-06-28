@@ -6,7 +6,7 @@
  * @s: string to print using puts recursive
  */
 
-void _puts_recursion(char *s)
+void _puts_recursion(char *s != '\0')
 {
 	if (s)
 	{
