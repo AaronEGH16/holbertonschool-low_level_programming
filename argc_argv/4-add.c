@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
+#include <.h>
 #include "main.h"
 
 /**
@@ -16,20 +16,23 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, f;
 	int sum = 0;
+	char *flag;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) <= INT_MAX && atoi(argv[i]) >= INT_MIN)
+		flag = argv[i];
+
+		for (f = 0; flag[f] != '\0'; f++)
 		{
-			sum += atoi(argv[i]);
+			if (flag[f] < '0' || flag[f] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
