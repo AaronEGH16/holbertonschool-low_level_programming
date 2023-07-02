@@ -4,7 +4,8 @@
 /**
  * name - prints the name of program executable
  *
- * argv: array of argc values
+ * @argc: argument counter
+ * @argv: array of argc values
  *
  * Return: always return 0
  */
