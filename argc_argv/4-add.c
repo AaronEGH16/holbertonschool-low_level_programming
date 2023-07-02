@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (argv[i] <= INT_MAX && argv[i] >= INT_MIN)
+		if (atoi(argv[i]) <= INT_MAX && atoi(argv[i]) >= INT_MIN)
 		{
 			sum += atoi(argv[i]);
 		}
