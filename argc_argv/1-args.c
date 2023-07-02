@@ -5,6 +5,7 @@
  * main - prints the number of arguments
  *
  * @argc: argument counter
+ * @argv: array of arguments
  *
  * Return: always return 0
  */
