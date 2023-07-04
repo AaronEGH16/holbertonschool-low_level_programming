@@ -3,21 +3,20 @@
 /**
  * aux_lenght - get the lenght of string
  *
- * @n: int of recursion
  * @s: string to get the lenght
  *
  * Return: 1 + recursion
  */
 
-int aux_lenght(int n, char *s)
+int aux_lenght(char *s)
 {
-	if (s[n] != '\0')
+	if (*s != '\0')
 	{
-		return (aux_lenght(n++, s));
+		return (1 + aux_lenght(s + 1));
 	}
 	else
 	{
-		return (n);
+		return (0);
 	}
 }
 
@@ -33,21 +32,20 @@ int aux_lenght(int n, char *s)
 
 int aux_palindrome(char *s, int first, int last)
 {
-	if (first < last)
-	{
-		if (s[first] == s[last])
-		{
-			return (aux_palindrome(s, first++, last--));
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	else
+	if (first >= last)
 	{
 		return (1);
 	}
+	if (s[first] != s[last])
+	{
+		return (0);
+	}
+	if (first < last || first < last + 1)
+	{
+		return (aux_palindrome(s, first++, last--));
+	}
+	return (1);
+
 }
 
 /**
@@ -60,11 +58,14 @@ int aux_palindrome(char *s, int first, int last)
 
 int is_palindrome(char *s)
 {
-	int first = 0;
 	int last = 0;
 
-	last = aux_lenght(0, s);
-	last--;
+	last = aux_lenght(s);
 
-	return (aux_palindrome(s, first, last));
+	if (last == 0)
+	{
+		return (1);
+	}
+
+	return (aux_palindrome(s, 0, last--));
 }
