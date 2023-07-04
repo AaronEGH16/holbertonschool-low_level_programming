@@ -1,6 +1,27 @@
 #include "./main.h"
 
 /**
+ * aux_lenght - get the lenght of string
+ *
+ * @n: int of recursion
+ * @s: string to get the lenght
+ *
+ * Return: 1 + recursion
+ */
+
+int aux_lenght(int n, char *s)
+{
+	if (s[n] != '\0')
+	{
+		return (1 + aux_lenght(n++, s));
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
  * aux_palindrome - ingresa el string a leer y compara las letras first y last
  *
  * @s: string a leer
@@ -42,11 +63,7 @@ int is_palindrome(char *s)
 	int first = 0;
 	int last = 0;
 
-	while (*s)
-	{
-		last++;
-	}
-
+	last = aux_lenght(0, s);
 	last--;
 
 	return (aux_palindrome(s, first, last));
