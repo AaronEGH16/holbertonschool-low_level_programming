@@ -13,11 +13,11 @@ int aux_lenght(int n, char *s)
 {
 	if (s[n] != '\0')
 	{
-		return (1 + aux_lenght(n++, s));
+		return (aux_lenght(n++, s));
 	}
 	else
 	{
-		return (0);
+		return (n);
 	}
 }
 
