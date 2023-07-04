@@ -36,7 +36,7 @@ int aux_palindrome(char *s, int first, int last)
 	{
 		return (1);
 	}
-	if (s[first] != s[last])
+	if (*s + first != *s + last)
 	{
 		return (0);
 	}
