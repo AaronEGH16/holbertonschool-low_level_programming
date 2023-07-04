@@ -40,12 +40,10 @@ int aux_palindrome(char *s, int first, int last)
 	{
 		return (0);
 	}
-	if (first <= last || first < last + 1)
+	else
 	{
 		return (aux_palindrome(s, first + 1, last - 1));
 	}
-	return (1);
-
 }
 
 /**
