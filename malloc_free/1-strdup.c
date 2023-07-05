@@ -13,7 +13,7 @@ int _strlen(char *st)
 {
 	int i = 0;
 
-	if (!st)
+	if (!st || *st == "")
 	{
 		return ('\0');
 	}
@@ -37,7 +37,7 @@ int _strlen(char *st)
 
 char *_strdup(char *str)
 {
-	int lenght = _strlen(str);
+	int lenght = _strlen(str) + 1;
 	char *s;
 	int i = 0;
 
