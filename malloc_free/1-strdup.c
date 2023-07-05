@@ -13,7 +13,7 @@ int _strlen(char *st)
 {
 	int i = 0;
 
-	if (!st || *st == "")
+	if (!st)
 	{
 		return ('\0');
 	}
