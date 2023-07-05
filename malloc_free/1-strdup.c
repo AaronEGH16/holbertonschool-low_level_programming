@@ -53,7 +53,7 @@ char *_strdup(char *str)
 		return ('\0');
 	}
 
-	while (i < lenght - 1)
+	while (i < lenght)
 	{
 		s[i] = str[i];
 		i++;
