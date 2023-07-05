@@ -22,7 +22,7 @@ int _strlen(char *st)
 	{
 		i++;
 	}
-	return (i);
+	return (i + 1);
 }
 
 /**
@@ -37,11 +37,11 @@ int _strlen(char *st)
 
 char *_strdup(char *str)
 {
-	int lenght = _strlen(str) + 1;
+	int lenght = _strlen(str);
 	char *s;
 	int i = 0;
 
-	if (lenght == '\0' || lenght == 1)
+	if (lenght == '\0' || lenght == 0)
 	{
 		return ('\0');
 	}
