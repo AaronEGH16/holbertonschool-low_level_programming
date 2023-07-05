@@ -41,7 +41,7 @@ char *_strdup(char *str)
 	char *s;
 	int i = 0;
 
-	if (lenght == '\0' || lenght == 0)
+	if (lenght == '\0' || lenght == 1)
 	{
 		return ('\0');
 	}
