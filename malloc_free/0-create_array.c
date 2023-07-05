@@ -2,7 +2,7 @@
 #include "./main.h"
 
 /**
- * create_array: create array with MALLOC
+ * create_array - create array with MALLOC
  *
  * @size: size of the array
  * @c: char to print
