@@ -41,12 +41,12 @@ char *str_concat(char *s1, char *s2)
 	char *s;
 	int lenL = _strlen(s1);
 	int lenR = _strlen(s2);
-	int lenght = 0;
+	int lenght = 1;
 	int x, y;
 
 	if ((lenL != '\0' || lenL != 0) || (lenR != '\0' || lenR != 0))
 	{
-		lenght = lenL + lenR + 1;
+		lenght = lenL + lenR;
 	}
 
 	s = malloc(sizeof(char) * lenght);
