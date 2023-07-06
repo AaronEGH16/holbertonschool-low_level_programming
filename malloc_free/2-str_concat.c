@@ -46,7 +46,7 @@ char *str_concat(char *s1, char *s2)
 
 	if ((lenL != '\0' || lenL != 0) || (lenR != '\0' || lenR != 0))
 	{
-		lenght = lenL + lenR;
+		lenght += lenL + lenR;
 	}
 
 	s = malloc(sizeof(char) * lenght);
@@ -57,7 +57,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		return ('\0');
 	}
-	
+
 	if (lenL != '\0' || lenL != 0)
 	{
 		while (x < lenL)
