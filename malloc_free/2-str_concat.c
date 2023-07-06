@@ -53,11 +53,11 @@ char *str_concat(char *s1, char *s2)
 	x = 0;
 	y = 0;
 
-	if (!s || lenght == 0)
+	if (!s)
 	{
 		return ('\0');
 	}
-
+	
 	if (lenL != '\0' || lenL != 0)
 	{
 		while (x < lenL)
