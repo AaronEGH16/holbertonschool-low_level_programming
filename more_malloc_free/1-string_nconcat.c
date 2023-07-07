@@ -68,13 +68,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 	}
 
-	if (lenR != '\0')
+	if (secure != '\0')
 	{
 		for (; y < secure; x++, y++)
 		{
 			a[x] = s2[y];
 		}
 	}
-	a[x + 1] = '\0';
+	a[x] = '\0';
 	return (a);
 }
