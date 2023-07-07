@@ -52,7 +52,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		secure = n;
 	}
-	a = malloc(sizeof(char) * (lenL + secure));
+	a = malloc(sizeof(char) * (lenL + secure + 1));
 	if (!a)
 	{
 		return ('\0');
