@@ -70,7 +70,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (lenR != '\0')
 	{
-		for (; y < lenR; x++, y++)
+		for (; y < secure; x++, y++)
 		{
 			a[x] = s2[y];
 		}
