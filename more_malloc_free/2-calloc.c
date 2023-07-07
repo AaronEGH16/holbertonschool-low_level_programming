@@ -30,11 +30,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return ('\0');
 	}
 
-	b = a;
+	/*b = a;*/
 
 	for (x = 0; x < (nmemb * size); x++)
 	{
-		b[x] = '\0';
+		(char *)a[x] = '\0';
 	}
 
 	return (a);
