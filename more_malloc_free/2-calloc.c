@@ -15,6 +15,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int *a, x;
+	char *b;
 
 	if (nmemb <= 0 || size <= 0)
 	{
@@ -28,9 +29,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return ('\0');
 	}
 
+	b = a;
+
 	for (x = 0; x < (nmemb * size); x++)
 	{
-		a[x] = '\0';
+		b[x] = '\0';
 	}
 
 	return (a);
