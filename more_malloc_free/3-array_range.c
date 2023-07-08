@@ -28,7 +28,7 @@ int *array_range(int min, int max)
 		return ('\0');
 	}
 
-	for (x = 0; x < (max - min); x++)
+	for (x = 0; x < ((max - min) + 1); x++)
 	{
 		a[x] = min + x;
 	}
