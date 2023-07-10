@@ -3,10 +3,10 @@
 /**
  * init_dog - initialize a dog struct
  *
- * @d: addres of dog struct
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of dog
+ * @d: struct addres
+ * @name: dog name
+ * @age: dog age
+ * @owner: dog owner
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
