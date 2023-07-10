@@ -26,27 +26,21 @@ int _strlen(char *st)
 }
 
 /**
- * _strncpy - copy the string content to dest but limit string chars
+ * _strncpy - copy the string content to dest
  *
  * @dest: destiny of the copy
  * @src: string to copy
- * @n: limit chars of the string
  *
- * Return: returns a copy of src but only n chars
+ * Return: returns a copy of src
  */
 
-char *_strncpy(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src)
 {
 	int count = 0;
 
-	while (count < n && src[count] != '\0')
+	while (src[count] != '\0')
 	{
 		dest[count] = src[count];
-		count++;
-	}
-	while (count < n)
-	{
-		dest[count] = '\0';
 		count++;
 	}
 
@@ -78,8 +72,28 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return ('\0');
 	}
 
-	_strncpy(copy_name, name, _strlen(name));
-	_strncpy(copy_owner, owner, _strlen(owner));
+	copy_name = malloc(_strlen(name));
+
+	if (!copy_name)
+	{
+		free(copy_name);
+		free(d);
+		return ('\0');
+	}
+
+	_strncpy(copy_name, name);
+
+	copy_owner = malloc(_strlen(owner));
+
+	if (!copy_owner)
+	{
+		free(copy_owner);
+		free(copy_name);
+		free(d);
+		return ('\0');
+	}
+
+	_strncpy(copy_owner, owner);
 
 	d->name = copy_name;
 	d->age = age;
