@@ -8,13 +8,11 @@
  * get_op_func - get the operation when do you want
  *
  * @s: the calc operator
- * @a: num1
- * @b: num2
  *
  * Return: the result of calc
  */
 
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -24,12 +22,17 @@ int (*get_op_func(char *s))(int a, int b)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int i = 0;
 
 	i = strlen(s);
 
 	if (i == 1)
-		return ((ops[s])(a, b));
+	{
+		i = 0;
+		while (i < 5 && ops[i].op != *s)
+			i++;
+		return (ops[i].f);
+	}
 
 	printf("Error\n");
 	exit(99);
