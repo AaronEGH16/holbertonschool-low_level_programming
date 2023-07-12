@@ -14,7 +14,7 @@
  * Return: the result of calc
  */
 
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int *a, int *b)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -28,7 +28,7 @@ int (*get_op_func(char *s))(int a, int b)
 
 	i = strlen(s);
 
-	if (i == 1 || ops[s] != 4)
+	if (i == 1)
 		return (ops[s](a, b));
 
 	printf("Error\n");
