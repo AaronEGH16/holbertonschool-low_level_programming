@@ -13,11 +13,14 @@ int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int res = 0;
 
+	if (n == 0)
+		return (res);
+
 	va_list	num;
 
 	va_start(num, n);
 
-	while (va_arg(num, unsigned int) != 0 && n)
+	while (va_arg(num, unsigned int))
 	{
 		res += va_arg(num, unsigned int);
 	}
