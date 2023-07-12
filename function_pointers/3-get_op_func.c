@@ -24,16 +24,8 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	i = strlen(s);
+	while (i < 5 && *(ops[i].op) != *s)
+		i++;
 
-	if (i == 1)
-	{
-		i = 0;
-		while (i < 5 && *(ops[i].op) != *s)
-			i++;
-		return (ops[i].f);
-	}
-
-	printf("Error\n");
-	exit(99);
+	return (ops[i].f);
 }
