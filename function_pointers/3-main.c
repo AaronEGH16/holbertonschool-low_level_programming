@@ -19,9 +19,12 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	int num1 = atoi(argv[1]);
-	int num2 = atoi(argv[3]);
-	char *op = argv[2];
+	int num1;
+	num1 = atoi(argv[1]);
+	int num2;
+	num2 = atoi(argv[3]);
+	char *op;
+	*op = argv[2];
 
 	if (op[1] != '\0')
 	{
