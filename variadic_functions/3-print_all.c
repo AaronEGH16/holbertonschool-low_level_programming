@@ -12,30 +12,33 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i, n;
 	va_list form;
+	char *str;
 
-	i = 0;
+	i = 0, n = 0;
 
 	va_start(form, format);
-
-	while (format)
+	while (format[n] != '\0')
 		n++;
-
-	while (format)
+	while (format && format[i])
 	{
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(form, char));
+				printf("%c", va_arg(form, int));
 				break;
 			case 'i':
 				printf("%d", va_arg(form, int));
 				break;
 			case 'f':
-				printf("%f", va_arg(form, float));
+				printf("%f", va_arg(form, double));
 				break;
 			case 's':
-				printf("%s",
-				((va_arg(form, char *) == NULL) ? "(nil)" : va_arg(form, char *)));
+				str = va_arg(form, char *);
+				if (str == NULL)
+				{
+					str = "(nil)";
+				}
+				printf("%s", str);
 				break;
 		}
 		if ((format[i] == 'c' ||
@@ -46,6 +49,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-
 	va_end(form);
 }
