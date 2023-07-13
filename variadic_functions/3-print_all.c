@@ -27,15 +27,15 @@ void print_all(const char * const format, ...)
 			case 'c':
 				printf("%c", va_arg(form, char));
 				break;
+			case 'i':
+				printf("%d", va_arg(form, int));
+				break;
 			case 'f':
 				printf("%f", va_arg(form, float));
 				break;
 			case 's':
 				printf("%s",
 				((va_arg(form, char *) == NULL) ? "(nil)" : va_arg(form, char *)));
-				break;
-			case 'i':
-				printf("%d", va_arg(form, int));
 				break;
 		}
 		if ((format[i] == 'c' ||
