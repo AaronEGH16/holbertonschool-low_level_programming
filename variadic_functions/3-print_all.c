@@ -40,9 +40,10 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", str);
 				break;
+			case NULL:
+				break;
 		}
-		if ((format[i] == 'c' ||
-			format[i] == 'i' ||
+		if ((format[i] == 'c' || format[i] == 'i' ||
 			format[i] == 'f' ||
 			format[i] == 's') && i < (n - 1))
 			printf(", ");
