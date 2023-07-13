@@ -4,7 +4,7 @@
 /**
  * sum_them_all - is a variadic function with sum all arguments
  *
- * @n: first argument
+ * @n: num of argument
  *
  * Return: return a sum of all arguments
  */
