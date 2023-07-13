@@ -23,6 +23,7 @@ void print_all(const char * const format, ...)
 	while (format)
 	{
 		switch (format[i])
+		{
 			case 'c':
 				printf("%c", va_arg(form, char));
 				break;
@@ -36,7 +37,7 @@ void print_all(const char * const format, ...)
 			case 'i':
 				printf("%d", va_arg(form, int));
 				break;
-
+		}
 		if ((format[i] == 'c' ||
 			format[i] == 'i' ||
 			format[i] == 'f' ||
