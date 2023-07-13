@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	i = 0, n = 0;
 
 	va_start(form, format);
-	while (format[n] != '\0')
+	while (format)
 		n++;
 	while (format && format[i])
 	{
@@ -39,8 +39,6 @@ void print_all(const char * const format, ...)
 					str = "(nil)";
 				}
 				printf("%s", str);
-				break;
-			case NULL:
 				break;
 		}
 		if ((format[i] == 'c' || format[i] == 'i' ||
