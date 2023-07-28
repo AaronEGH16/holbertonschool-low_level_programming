@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 #include <string.h>
 
 /**
@@ -25,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[rec] < '0' || b[rec] > '1')
 			return (0);
-		res += (pow(2, exp)) * b[rec];
+		res += (2 ^ exp) * b[rec];
 		rec++, exp--;
 	}
 
