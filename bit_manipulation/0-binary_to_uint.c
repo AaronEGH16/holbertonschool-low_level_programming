@@ -25,7 +25,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[rec] < '0' || b[rec] > '1')
 			return (0);
-		res += (2 ^ exp) * atoi(b[rec]);
+		res += (2 ^ exp) * atoi(&b[rec]);
 		rec++, exp--;
 	}
 
