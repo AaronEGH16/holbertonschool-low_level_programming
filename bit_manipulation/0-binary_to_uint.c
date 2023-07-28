@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 #include <stdlib.h>
 
 /**
@@ -15,7 +14,6 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int res = 0;
-	int exp = strlen(b);
 	int rec = 0;
 
 	if (b == NULL)
@@ -25,8 +23,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[rec] < '0' || b[rec] > '1')
 			return (0);
-		res += (2 ^ exp) * atoi(&b[rec]);
-		rec++, exp--;
+		res += (2 ^ rec) * atoi(&b[rec]);
+		rec++;
 	}
 
 	return (res);
