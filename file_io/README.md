@@ -11,6 +11,7 @@ new commands:
 			- O_CREAT create a file if not exist (?) [you need asignate file propierties (similar with bash)]
 					*_._._._ (first char modifi permisons to change propierties)
 					ej: 0600 (the propieties can`t be modifiead and only user can R and W)
+			- O_TRUNC erase all file content
 			- O_APPEND insert a new content at end of file (?)
 
 	read = using TOKEN copy N bits of file and insert in to BUF and return count of bits readed
