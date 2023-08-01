@@ -37,7 +37,7 @@ int main(int ac, char *av[])
 		if (fr == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 
-		fw = write(fd2, buf, 1024);
+		fw = write(fd2, buf, fr);
 		if (fw == -1)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
