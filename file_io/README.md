@@ -9,6 +9,7 @@ new commands:
 			- O_RDWR you can read and write file (2)
 			- O_CREAT create a file if not exist (?) [you need asignate file propierties (similar with bash)]
 					*____ (first char modifi permisons to change propierties)
+					ej: 0600 (the propieties can`t be modifiead and only user can R and W)
 			- O_APPEND insert a new content at end of file (?)
 
 	read = using token copy N bits of file and insert in to buf
