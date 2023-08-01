@@ -7,14 +7,16 @@ new commands:
 			- O_RDONLY you only can read the file (0)
 			- O_WRONLY you only can write in the file (1)
 			- O_RDWR you can read and write file (2)
-			- O_CREAT create a file if not exist (?)
+			- O_CREAT create a file if not exist (?) [you need asignate file propierties (similar with bash)]
+					*____ (first char modifi permisons to change propierties)
+			- O_APPEND insert a new content at end of file (?)
 
 	read = using token copy N bits of file and insert in to buf
 		read(token, buf, N);
 
 	close = similar to the free command,
-			frees the token so that it does not reference any
-			files and can be used again
+		frees the token so that it does not reference any
+		files and can be used again
 
 	write = write N bits of buf content in the file using token
 		write(token, buf, N);
