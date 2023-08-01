@@ -19,7 +19,7 @@ int main(int ac, char *av[])
 {
 	char *buf[1024];
 	int fd1, fd2;
-	ssize_t fr, fw, fc;
+	ssize_t fr, fw;
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
