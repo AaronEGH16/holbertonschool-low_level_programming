@@ -12,5 +12,5 @@ hash tables:
 
 	- hash table struct:
 		the hash table contains:
-			* size (actual size of the table)
-			* pointer to the first node
+			* size (size of the base array)
+			* array of nodes
