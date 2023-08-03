@@ -16,6 +16,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int idx;
 	hash_node_t *srch = NULL;
 
+	if (!ht || !key || *key == '\0')
+		return (NULL);
+
 	idx = key_index((unsigned char *)key, ht->size);
 
 	srch = ht->array[idx];
@@ -23,7 +26,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (!srch)
 		return (NULL);
 
-	while (srch && key != srch->key)
+	while (srch && *key != srch->key)
 		srch = srch->next;
 
 	if (!srch)
