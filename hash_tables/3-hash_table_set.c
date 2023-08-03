@@ -25,7 +25,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (valcp == NULL)
 		return (0);
 
-	indx = key_indx((const unsigned char *)key, ht->size);
+	indx = key_index((const unsigned char *)key, ht->size);
 
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
