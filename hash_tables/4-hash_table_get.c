@@ -26,7 +26,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (!srch)
 		return (NULL);
 
-	while (srch && *key != srch->key)
+	while (srch && strcmp(key, srch->key) != 0)
 		srch = srch->next;
 
 	if (!srch)
