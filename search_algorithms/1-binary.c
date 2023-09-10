@@ -13,13 +13,13 @@ void print_list(int *array, size_t low, size_t high)
 	size_t search;
 
 	printf("Searching in array: ");
-	for(search = low; search <= high; search++)
+	for (search = low; search <= high; search++)
 	{
+		printf("%d", array[search]);
 		if (search != high)
-			printf("%d, ", array[search]);
-		else
-			printf("%d\n", array[search]);
+			printf(", ");
 	}
+	printf("\n");
 }
 
 /**
@@ -49,7 +49,7 @@ int binary_search(int *array, size_t size, int value)
 
 		if (array[attemp] == value)
 			return (attemp);
-		else if(array[attemp] > value)
+		else if (array[attemp] > value)
 			high = attemp - 1;
 		else
 			low = attemp + 1;
